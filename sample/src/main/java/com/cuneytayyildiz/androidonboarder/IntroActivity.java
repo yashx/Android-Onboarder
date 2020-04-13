@@ -26,6 +26,7 @@ public class IntroActivity extends OnboarderActivity implements OnboarderPageCha
                         .titleColorId(R.color.primary_text)
                         .descriptionColorId(R.color.secondary_text)
                         .multilineDescriptionCentered(true)
+                        .textBias(1f)
                         .build(),
 
                 new OnboarderPage.Builder()
@@ -36,6 +37,7 @@ public class IntroActivity extends OnboarderActivity implements OnboarderPageCha
                         .titleColorId(R.color.primary_text)
                         .descriptionColorId(R.color.secondary_text)
                         .multilineDescriptionCentered(true)
+                        .textBias(0.25f)
                         .build(),
 
                 new OnboarderPage.Builder()
@@ -46,6 +48,8 @@ public class IntroActivity extends OnboarderActivity implements OnboarderPageCha
                         .titleColorId(R.color.primary_text)
                         .descriptionColorId(R.color.secondary_text)
                         .multilineDescriptionCentered(true)
+                        .imageBias(0.25f)
+                        .textBias(0.75f)
                         .build(),
 
                 new OnboarderPage.Builder()

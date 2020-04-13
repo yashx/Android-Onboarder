@@ -1,17 +1,18 @@
 package com.cuneytayyildiz.onboarder;
 
 import android.content.Context;
-import androidx.annotation.NonNull;
-import androidx.constraintlayout.widget.ConstraintLayout;
-import androidx.core.content.ContextCompat;
-import androidx.viewpager.widget.PagerAdapter;
-import androidx.appcompat.content.res.AppCompatResources;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.content.res.AppCompatResources;
+import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.core.content.ContextCompat;
+import androidx.viewpager.widget.PagerAdapter;
 
 import java.util.List;
 
@@ -105,6 +106,8 @@ public class OnboarderPagerAdapter extends PagerAdapter {
         onboarderImage.getLayoutParams().width = page.getImageWidthPx();
         ((ConstraintLayout.LayoutParams)onboarderImage.getLayoutParams()).verticalBias = page.getImageBias();
         ((ConstraintLayout.LayoutParams)onboarderDescription.getLayoutParams()).bottomMargin = page.getTextPaddingBottomPx();
+
+        ((ConstraintLayout.LayoutParams)onboarderTitle.getLayoutParams()).verticalBias = page.getTextBias();
 
         container.addView(itemView);
 

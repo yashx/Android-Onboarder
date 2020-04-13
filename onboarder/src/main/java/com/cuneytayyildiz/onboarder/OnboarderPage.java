@@ -34,6 +34,7 @@ public class OnboarderPage {
     private int imageWidthPx = ViewGroup.LayoutParams.WRAP_CONTENT;
     private int imageHeightPx = ViewGroup.LayoutParams.WRAP_CONTENT;
     private float imageBias = .5f;//centered by default
+    private float textBias = .5f;//default
 
     private int textPaddingBottomPx = 0;
     private boolean multilineDescriptionCentered;
@@ -58,6 +59,7 @@ public class OnboarderPage {
         setImageHeightPx(builder.imageHeightPx);
         setImageWidthPx(builder.imageWidthPx);
         setImageBias(builder.imageBias);
+        setTextBias(builder.textBias);
         setTextPaddingBottomPx(builder.textPaddingBottomDp);
     }
 
@@ -198,6 +200,14 @@ public class OnboarderPage {
         return imageWidthPx;
     }
 
+    public float getTextBias() {
+        return textBias;
+    }
+
+    public void setTextBias(float textBias) {
+        this.textBias = textBias;
+    }
+
     public float getImageBias() {
         return imageBias;
     }
@@ -242,6 +252,7 @@ public class OnboarderPage {
         int imageWidthPx = ViewGroup.LayoutParams.WRAP_CONTENT;
         int imageHeightPx = ViewGroup.LayoutParams.WRAP_CONTENT;
         float imageBias = .5f;//center
+        float textBias = .5f;
 
         int textPaddingBottomDp = 16;
 
@@ -338,6 +349,11 @@ public class OnboarderPage {
 
         public Builder imageBias(float bias){
             imageBias = bias;
+            return this;
+        }
+
+        public Builder textBias(float bias){
+            textBias = bias;
             return this;
         }
 
