@@ -2,7 +2,6 @@ package com.cuneytayyildiz.onboarder;
 
 import android.content.res.Resources;
 import android.graphics.drawable.Drawable;
-import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.ColorRes;
@@ -11,8 +10,8 @@ import androidx.annotation.StringRes;
 
 public class OnboarderPage {
 
-    private String title;
-    private String description;
+    private CharSequence title;
+    private CharSequence description;
     private Drawable imageResource;
     @StringRes
     private int titleResourceId = 0;
@@ -63,7 +62,7 @@ public class OnboarderPage {
         setTextPaddingBottomPx(builder.textPaddingBottomDp);
     }
 
-    public String getTitle() {
+    public CharSequence getTitle() {
         return title;
     }
 
@@ -71,7 +70,7 @@ public class OnboarderPage {
         return titleResourceId;
     }
 
-    public String getDescription() {
+    public CharSequence getDescription() {
         return description;
     }
 
@@ -160,11 +159,11 @@ public class OnboarderPage {
         this.multilineDescriptionCentered = multilineDescriptionCentered;
     }
 
-    public void setTitle(String title) {
+    public void setTitle(CharSequence title) {
         this.title = title;
     }
 
-    public void setDescription(String description) {
+    public void setDescription(CharSequence description) {
         this.description = description;
     }
 
@@ -223,13 +222,13 @@ public class OnboarderPage {
     public void setTextPaddingBottomPx(int textPaddingBottomDp) {
         final float scale = Resources.getSystem().getDisplayMetrics().density;
 
-        this.textPaddingBottomPx = Math.round(textPaddingBottomDp*scale);
+        this.textPaddingBottomPx = Math.round(textPaddingBottomDp * scale);
     }
 
 
     public static final class Builder {
-        private String title;
-        private String description;
+        private CharSequence title;
+        private CharSequence description;
         private Drawable imageResource;
         @StringRes
         private int titleResourceId = 0;
@@ -259,12 +258,12 @@ public class OnboarderPage {
         public Builder() {
         }
 
-        public Builder title(String val) {
+        public Builder title(CharSequence val) {
             title = val;
             return this;
         }
 
-        public Builder description(String val) {
+        public Builder description(CharSequence val) {
             description = val;
             return this;
         }
@@ -274,47 +273,47 @@ public class OnboarderPage {
             return this;
         }
 
-        public Builder titleResourceId(@StringRes  int val) {
+        public Builder titleResourceId(@StringRes int val) {
             titleResourceId = val;
             return this;
         }
 
-        public Builder descriptionResourceId( @StringRes int val) {
+        public Builder descriptionResourceId(@StringRes int val) {
             descriptionResourceId = val;
             return this;
         }
 
-        public Builder imageResourceId(  @DrawableRes int val) {
+        public Builder imageResourceId(@DrawableRes int val) {
             imageResourceId = val;
             return this;
         }
 
-        public Builder titleColorId(  @ColorRes int val) {
+        public Builder titleColorId(@ColorRes int val) {
             titleColorId = val;
             return this;
         }
 
-        public Builder titleColor(int color){
+        public Builder titleColor(int color) {
             titleColor = color;
             return this;
         }
 
-        public Builder descriptionColorId(  @ColorRes int val) {
+        public Builder descriptionColorId(@ColorRes int val) {
             descriptionColorId = val;
             return this;
         }
 
-        public Builder descriptionColor(int color){
+        public Builder descriptionColor(int color) {
             descriptionColor = color;
             return this;
         }
 
-        public Builder backgroundColorId(  @ColorRes int val) {
+        public Builder backgroundColorId(@ColorRes int val) {
             backgroundColorId = val;
             return this;
         }
 
-        public Builder backgroundColor(int color){
+        public Builder backgroundColor(int color) {
             backgroundColor = color;
             return this;
         }
@@ -334,25 +333,25 @@ public class OnboarderPage {
             return this;
         }
 
-        public Builder imageSizePx(int width, int height){
+        public Builder imageSizePx(int width, int height) {
             imageWidthPx = width;
             imageHeightPx = height;
             return this;
         }
 
-        public Builder imageSizeDp(int width, int height){
+        public Builder imageSizeDp(int width, int height) {
             final float scale = Resources.getSystem().getDisplayMetrics().density;
-            imageWidthPx = Math.round(width*scale);
-            imageHeightPx = Math.round(height*scale);
+            imageWidthPx = Math.round(width * scale);
+            imageHeightPx = Math.round(height * scale);
             return this;
         }
 
-        public Builder imageBias(float bias){
+        public Builder imageBias(float bias) {
             imageBias = bias;
             return this;
         }
 
-        public Builder textBias(float bias){
+        public Builder textBias(float bias) {
             textBias = bias;
             return this;
         }

@@ -1,6 +1,7 @@
 package com.cuneytayyildiz.androidonboarder;
 
 import android.os.Bundle;
+import android.text.Html;
 import android.util.Log;
 import android.widget.Toast;
 
@@ -30,7 +31,7 @@ public class IntroActivity extends OnboarderActivity implements OnboarderPageCha
                         .build(),
 
                 new OnboarderPage.Builder()
-                        .title("Eclair")
+                        .title(Html.fromHtml("<b><u>Eclair</u></b>"))
                         .description("Android 2.1")
                         .imageResourceId(R.drawable.eclair_circle)
                         .backgroundColorId(R.color.color_eclair)

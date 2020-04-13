@@ -48,22 +48,6 @@ public class OnboarderPagerAdapter extends PagerAdapter {
         TextView onboarderTitle = itemView.findViewById(R.id.textview_title);
         TextView onboarderDescription = itemView.findViewById(R.id.textview_description);
 
-        if (page.getTitle() != null) {
-            onboarderTitle.setText(page.getTitle());
-        }
-
-        if (page.getTitleResourceId() != 0) {
-            onboarderTitle.setText(container.getResources().getString(page.getTitleResourceId()));
-        }
-
-        if (page.getDescription() != null) {
-            onboarderDescription.setText(page.getDescription());
-        }
-
-        if (page.getDescriptionResourceId() != 0) {
-            onboarderDescription.setText(context.getResources().getString(page.getDescriptionResourceId()));
-        }
-
         if (page.getTitleColor() != 0) {
             onboarderTitle.setTextColor(page.getTitleColor());
         }
@@ -78,6 +62,22 @@ public class OnboarderPagerAdapter extends PagerAdapter {
 
         if (page.getDescriptionColorId() != 0) {
             onboarderDescription.setTextColor(ContextCompat.getColor(context, page.getDescriptionColorId()));
+        }
+
+        if (page.getTitle() != null) {
+            onboarderTitle.setText(page.getTitle());
+        }
+
+        if (page.getTitleResourceId() != 0) {
+            onboarderTitle.setText(container.getResources().getString(page.getTitleResourceId()));
+        }
+
+        if (page.getDescription() != null) {
+            onboarderDescription.setText(page.getDescription());
+        }
+
+        if (page.getDescriptionResourceId() != 0) {
+            onboarderDescription.setText(context.getResources().getString(page.getDescriptionResourceId()));
         }
 
         if(page.getImageResource()!=null){
