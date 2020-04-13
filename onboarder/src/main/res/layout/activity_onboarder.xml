@@ -69,7 +69,6 @@
             android:layout_height="wrap_content"
             android:layout_gravity="end|center"
             android:drawableBottom="@drawable/ic_right_white_24dp"
-            android:padding="@dimen/activity_margin"
             android:text="@string/button.next"
             android:textColor="@color/white" />
 
