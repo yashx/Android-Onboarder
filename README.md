@@ -1,5 +1,3 @@
-[![Android Arsenal]( https://img.shields.io/badge/Android%20Arsenal-Android%20Onboarder-green.svg?style=flat )]( https://android-arsenal.com/details/1/6598 )
-
 # Android Onboarder
 <p align="center"> 
 Android Onboarder is a simple and lightweight library that helps you to create cool and beautiful introduction screens for your apps without writing dozens of lines of code.
@@ -7,14 +5,33 @@ Android Onboarder is a simple and lightweight library that helps you to create c
 
 ![Sample image](https://media.giphy.com/media/3oFzm1BGCJzKM5iuIw/giphy.gif)
 
+# About the fork
+This fork has changes that will break applications using older version of the library so I will maintain this as a personal fork of the project. See upstream for original repository.
+
+## Differences from upstream
+The original library placed title and description at the bottom of the screen and imageBias was used to position image in the remaining area.
+In this fork, imageBias positions image by entire screen height and text sticks below it. textBias can be used to position text in remaining area. See the sample application. 
+
 ## Usage
 
 #### Gradle
 
+Add it in your root build.gradle at the end of repositories:
+
+```groovy
+allprojects {
+    repositories {
+        ...
+        maven { url 'https://jitpack.io' }
+    }
+}
+```
+
+
 Add dependency in your build.gradle
 
 ```groovy
-implementation 'com.cuneytayyildiz:onboarder:1.0.4'
+implementation 'com.github.yashx:Android-Onboarder:-SNAPSHOT'
 ```
 
 #### Implementation
